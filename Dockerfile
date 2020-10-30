@@ -1,7 +1,7 @@
 FROM ubuntu:bionic
 
 # base packages
-RUN apt update && apt install -y --no-install-recommends wget curl unzip zip jq git ca-certificates g++ build-essential
+RUN apt update && apt install -y --no-install-recommends wget curl unzip zip jq git ca-certificates
 
 # install go
 ENV PATH="$PATH:/usr/local/go/bin"

@@ -18,7 +18,7 @@ RUN curl -L -o bazel-installer.sh https://github.com/bazelbuild/bazel/releases/d
 # clone code
 RUN git clone https://github.com/v2fly/v2ray-core.git \
     && cd v2ray-core \
-    && git checkout $(git describe --abbrev=0 --tags) \
+    && git checkout $(curl -s https://api.github.com/repos/v2fly/v2ray-core/releases/latest | jq .tag_name -r) \
     && go mod download
 
 WORKDIR /v2ray-core

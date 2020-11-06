@@ -5,8 +5,8 @@ RUN apt update && apt install -y --no-install-recommends wget curl unzip zip jq 
 
 # install go
 ENV PATH="$PATH:/usr/local/go/bin"
-RUN wget https://golang.org/dl/go1.15.3.linux-amd64.tar.gz \
-    && tar -C /usr/local -xzf go1.15.3.linux-amd64.tar.gz \
+RUN wget https://golang.org/dl/go1.15.4.linux-amd64.tar.gz \
+    && tar -C /usr/local -xzf go1.15.4.linux-amd64.tar.gz \
     && go version
 
 # install bazel

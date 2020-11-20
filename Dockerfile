@@ -5,12 +5,12 @@ RUN apt update && apt install -y --no-install-recommends wget curl unzip zip jq 
 
 # install go
 ENV PATH="$PATH:/usr/local/go/bin"
-RUN wget https://golang.org/dl/go1.15.4.linux-amd64.tar.gz \
-    && tar -C /usr/local -xzf go1.15.4.linux-amd64.tar.gz \
+RUN wget https://golang.org/dl/go1.15.5.linux-amd64.tar.gz \
+    && tar -C /usr/local -xzf go1.15.5.linux-amd64.tar.gz \
     && go version
 
 # install bazel
-RUN curl -L -o bazel-installer.sh https://github.com/bazelbuild/bazel/releases/download/3.6.0/bazel-3.6.0-installer-linux-x86_64.sh \
+RUN curl -L -o bazel-installer.sh https://github.com/bazelbuild/bazel/releases/download/3.7.0/bazel-3.7.0-installer-linux-x86_64.sh \
     && chmod +x bazel-installer.sh \
     && ./bazel-installer.sh \
     && rm bazel-installer.sh
